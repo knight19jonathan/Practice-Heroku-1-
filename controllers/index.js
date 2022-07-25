@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const topicRoutes = require("./userController")
+const topicRoutes = require("./topicController");
 router.use("/api/topics",topicRoutes);
 
 const userRoutes = require("./userController");

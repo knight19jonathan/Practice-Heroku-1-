@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-const { route } = require(".");
+
 
 router.get("/", (req, res) => {
     fs.readFile("./pets.json", "utf8", (err, data) => {
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     });
 });
 
-route.post("/",(req,res)=>{
+router.post("/",(req,res)=>{
     console.log(req.body);
     const newTopic = {
         id: req.body.id,

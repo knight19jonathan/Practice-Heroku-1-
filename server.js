@@ -1,13 +1,18 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const app = express();
+const api = require('./controllers/index.js');
 const PORT = process.env.PORT || 3001
-//middleware for static assets
+
 app.use(express.static("public"));
 
-// Middleware for pasring HSOn and urlencoded form data
-app.use(express.json());
+
+app.use(express.json())
 app.use(express.urlencoded({ extended: true}));
+
+
+
+
 
 const allRoutes = require("./controllers")
 app.use(allRoutes); 
