@@ -1,4 +1,4 @@
-fetch ("/topics").then(res=>res.json()).then(data=>{
+fetch ("./api/topics").then(res=>res.json()).then(data=>{
     console.log(data);
     data.array.forEach(topic=> {
         const newLi = document.createElement("li");
@@ -17,7 +17,7 @@ document.querySelector("#new-topic-form").addEventListener("submit",e=>{
         id:document.querySelector("#idNum").value,
     }
     console.log(myTopic);
-    fetch("/topics",{
+    fetch("./api/topics",{
         method:"POST",
         body:JSON.stringify(myTopic),
         headers:{
