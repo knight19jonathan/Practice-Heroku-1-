@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/",(req,res)=>{
+router.post("/", (req, res) => {
     console.log(req.body);
     const newTopic = {
         id: req.body.id,
@@ -35,7 +35,7 @@ router.post("/",(req,res)=>{
                     if (err) {
                         throw err;
                     }
-                    res.json({ data: req.body, message: "Success!"});
+                    res.json({ data: req.body, message: "Success!" });
                 }
             );
         }
