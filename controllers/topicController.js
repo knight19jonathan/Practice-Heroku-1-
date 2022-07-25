@@ -22,7 +22,7 @@ router.post("/",(req,res)=>{
         category: req.body.category,
         comment: req.body.comment
     };
-    fs.readFile("./topis.json", "utf8", (err, data) => {
+    fs.readFile("./topics.json", "utf8", (err, data) => {
         if (err) {
             throw err;
         } else {
